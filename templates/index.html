@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>WEB AI</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link href="{{url_for('static',filename='css/style.css')}}" rel='stylesheet' type='text/css'>
+<style>
+header {
+    background-color: aliceblue;
+    color:black;
+    text-align:center;
+    padding:5px;	 
+}
+section {
+    width:1200px;
+    float:left;
+    padding:10px;	 	 
+}
+    .login{
+    width: 100%;
+    height: 750px;
+    background-color: darkgrey;
+    float: left;
+    margin-top: 2px;
+}
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+    #lo{
+        padding-top: 5px;
+    }
+    #loo{
+        padding-top: 5px;
+    }
+    input[type=text], select {
+    width: 100px;
+    padding: 8px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+    #daa{
+      color:brown;  
+    }
+    #py{
+       color:brown;  
+    }
+    #lb{
+        color:brown; 
+    }
+    .button {
+    background-color: #4CAF50; /* Green */
+    border: 50%;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25%;
+    text-align: center;
+    margin-left:35%; 
+}
+#aa{
+    background-color: #4CAF50; /* Green */
+    border: 50%;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    text-align: center;
+    margin-left:30%; 
+    text-decoration-color: aliceblue;
+    font-weight: bolder;
+}
+    #wrapper{font: times;}
+.container{width: 90%;
+margin: 0 auto;}
+#subheader{
+    width: 100%;
+    height: 70px;
+    background: green;
+    color: azure;
+    margin-top: 0px;}
+#subheader p{
+    margin-left: 350px;
+    margin-top: 15px;
+    font-size: 30px;
+    text-align: center;
+}
+#subheader a{
+    float: right;
+    line-height: 25px;
+    color: azure;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 15px;
+}
+#main-header{
+    width: 100%;
+    height: 100px;
+    background-color: bisque;
+    float: left;
+    margin-top: -15px;
+}
+#logo{
+    width: 200px;
+    float: left;
+    margin-top: 10px;
+}
+#m{
+    font-family: cursive;
+    color: cadetblue;
+    font-size: 50px;
+    font-weight: bold;
+    margin-left:15px;
+}
+#c{
+    font-family: fantasy;
+    font-size: 25px;
+    color: silver;
+}
+#search{
+    width: 650px;
+    float: left;
+    margin-left: 30px;
+    padding: 35px;
+    
+}
+.sr-area{
+    width: 650px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    float: left;
+    padding-left: 15px;
+}
+.sr-btn{
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin-left: -100px;
+    width: 100px;
+    background-color:orange;
+   
+}
+.login{
+    width: 100%;
+    height: 800px;
+    background-color: darkgrey;
+    float: left;
+    margin-top: 2px;
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:700px;
+    width:100px;
+    float:left;
+    padding:5px;
+    font-family: cursive;
+    color: cadetblue;
+}
+#log{
+    padding-left: 10px;
+}
+#diag{
+    padding-left: 350px;
+}
+.demo{
+    padding-left: 10px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 40px;
+}
+    #result{
+        width: 275px;
+        height: 80px;
+        border-color: cadetblue;
+        box-sizing: border-box;
+        background-color:white;
+        text-align: center;
+        padding-top: 30px;
+        margin-left: 35%;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+ <div id="wrapper">
+    <div id="header">
+        <div id="subheader">
+            <div class="container">
+            <p>Diagnosis of Appendicits</p>
+           <!-- <a href="#">Feedback</a><a href="#">About Us</a>--><a href="#">Help</a><a href="#">Home</a>
+            </div>
+        </div>
+        <div id="main-header">
+        <div id="logo">
+            <span id="m">Dignosis</span><span id="c">.here</span>
+            </div>
+            <div id="search">
+                <form action="http://www.yahoo.com" method="post">
+                <input class="sr-area" type="" name="search" placeholder="Search here">
+                <input class="sr-btn" type="Submit" name="Submit" value="Search">
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+ <div class="login">
+ <header>
+<h1>Diagnosis From Clinical Information</h1>
+</header>
+  <nav>
+      <p><i>Artificial Intelligence become one of promising technology for diagnosing diseases!<br><br> Here, we have been using this emerging technology for the diagnosis of Appendicits.</i></p>
+  </nav>
+   <!--<div id="log">
+	<h1 id="diag">Diagnosis From Clinical Information</h1>
+      <div id="wra"> -->
+     <!-- Main Input For Receiving Query to our ML --> 
+<section>
+    <form action="{{ url_for('predict')}}"method="post">
+     
+      <h3 id="daa"><i>DEMOGRAPHIC DATA</i></h3>
+        <label for="age"><b>Age</b></label>
+    	<input type="text" id="age" name="AGE" placeholder="Age" required="required" />
+       <label for="gen"><b>Gender</b></label><!--
+        <input type="text"id="gen" name="GENDER" placeholder="Gender" required="required" />-->
+        <select required aria-required="true" id="gen" name="GENDER">
+      <option value="">Choose</option>
+      <option value=1>Female</option>
+      <option value=0>Male</option> </select>
+        <!--<input type="checkbox" name="gender" value=0 required="required" > Male
+        <input type="checkbox" name="gender" value=1> Female -->
+  <!--      
+    <label for="gen">Gender</label>
+    <select id="gen" name="GENDER" required="required">
+      <option value=1>Female</option>
+      <option value=0>Male</option>
+    </select>-->
+        <!--<input type="text" name="VOMMITING" placeholder="Vommiting" required="required" />-->
+    <h3 id="py"><i>PHYSICAL EXAMINATION</i></h3>
+    <label for="vom"><b>Vommiting</b></label>
+    <select required aria-required="true" id="vom" name="VOMMITING">
+      <option value="">Choose</option>
+      <option value=1>Yes</option>
+      <option value=0>No</option>
+    </select>
+		<!--<input type="text" name="Nausea" placeholder="Nausea" required="required" />-->
+		<label for="nau"><b>Nausea</b></label>
+    <select required aria-required="true" id="nau" name="NAUSEA">
+      <option value="">Choose</option>
+      <option value=1>Yes</option>
+      <option value=0>No</option>
+    </select>
+		<!--<input type="text" name="ANOREXIA" placeholder="Anorexia" required="required" />-->
+    <label for="ano"><b>Anorexia</b></label>
+    <select required aria-required="true" id="ano" name="ANOREXIA">
+      <option value="">Choose</option>
+      <option value=1>Yes</option>
+      <option value=0>No</option>
+    </select>
+		<!--<input type="text" name="MIGRATION" placeholder="Migration-pain-RLQ" required="required" />-->
+    <label for="mig"><b>Migration of Pain to RLQ</b></label>
+    <select required aria-required="true" id="mig" name="MIGRATION">
+     <option value="">Choose</option>
+      <option value=1>Yes</option>
+      <option value=0>No</option>
+    </select>
+		<!--<input type="text" name="RLQTendernessandReboundPain" placeholder="RLQTendernessandReboundPain" required="required" />-->
+		<label for="rlq"><b>RLQ and Rebound Pain</b></label>
+    <select required aria-required="true" id="rlq" name="RLQTendernessandRebounPain">
+     <option value="">Choose</option>
+      <option value=1>Yes</option>
+      <option value=0>No</option>
+    </select>
+       <div id="lo">
+        <label for="temp"><b>Temperature</b></label>
+		<input type="text" id="temp"name="TEMPRATURE" placeholder="Temprature" required="required" />
+            <label for="dur"><b>Duration</b></label>
+		<input type="text" id="dur" name="DURATION" placeholder="Duration-symptom" required="required" />
+		<!--<input type="text" name="FEVER" placeholder="Fever" required="required" />-->
+            <label for="fev"><b>Fever</b></label>
+    <select required aria-required="true" id="fev" name="fev">
+     <option value="">Choose</option>
+      <option value=1>Yes</option>
+      <option value=0>No</option>
+    </select>
+       <!-- <input type="text" name="Cough" placeholder="Cough" required="required" />-->
+            <label for="cou"><b>Cough</b></label>
+    <select required aria-required="true" id="cou" name="COUGH">
+     <option value="">Choose</option>
+      <option value=1>Yes</option>
+      <option value=0>No</option>
+    </select>
+    <!--<input type="text" name="Diarrhea" placeholder="Diarrhea" required="required" />-->
+            <label for="dia"><b>Diarrhea</b></label>
+    <select required aria-required="true" id="dia" name="DIARRHEA">
+     <option value="">Choose</option>
+      <option value=1>Yes</option>
+      <option value=0>No</option> 
+    </select>
+     </div>
+      <h3 id="lb"><i>LABORATORY-CBC-TEST</i></h3>
+        <label for="hct"><b>HCT</b></label>
+        <input id="hct" type="text" name="HCT" placeholder="HCT" required="required" />
+        <label for="wbc"><b>WBC</b></label>
+        <input type="text" id="wbc" name="WBC" placeholder="WBC" required="required" />
+        <label for="plt"><b>PLT</b></label>
+        <input type="text" id="plt" name="PLT" placeholder="PLT" required="required" />
+        <label for="neu"><b>NEUT</b></label>
+        <input type="text" id="neu" name="NEUT" placeholder="NEUT" required="required" />
+        <label for="mch"><b>MCHC</b></label>
+        <input type="text" id="mch" name="MCHC" placeholder="MCHC" required="required" />
+        <label for="rbc"><b>RBC</b></label>
+        <input type="text" id="rbc" name="RBC" placeholder="RBC" required="required" />
+        <label for="hgb"><b>HGB</b></label>
+        <input type="text" id="hgb" name="HGB" placeholder="HGB" required="required" />
+        <div id="loo"> <label for="lym"><b>Lymph</b></label>
+        <input type="text" id="lym" name="Lymph" placeholder="lymph" required="required" /></div>
+        <button type="submit" class="button">Result</button>
+          </form>  
+
+   <br>
+   <br>
+   <div id="result">
+   {{ prediction_text }}
+   </div>
+   </section>
+    <a id="aa" href="#">Diagnosis From Ultrasound Image >>></a>
+ </div>
+<footer>
+<p>Copyright &copy; Eng. Mestawot Bogale</p>
+</footer>
+
+</body>
+
+</html>
