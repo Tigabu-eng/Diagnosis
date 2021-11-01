@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WEB AI</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<link href="{{url_for('static',filename='css/style.css')}}" rel='stylesheet' type='text/css'>
+<!--<link href="{{url_for('static',filename='css/style.css')}}" rel='stylesheet' type='text/css'>-->
+
 <style>
 header {
     background-color: aliceblue;
@@ -17,25 +17,12 @@ header {
     text-align:center;
     padding:5px;	 
 }
-section {
-    width:100%;
-    float:left;
-    padding:10px;	 	 
+    section{
+        height: auto; 
+        padding:25px;
+        background-color: darkgrey;
 }
-    .login{
-    width: inherit;
-    height: 750px;
-    background-color: darkgrey;
-    float: left;
-    margin-top: 2px;
-}
-footer {
-    background-color:black;
-    color:white;
-    clear:both;
-    text-align:center;
-    padding:5px;	 	 
-}
+
     #lo{
         padding-top: 5px;
     }
@@ -69,11 +56,11 @@ footer {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin-top: 10px;
     cursor: pointer;
     border-radius: 25%;
     text-align: center;
-    margin-left:35%; 
+    margin-left:40%; 
 }
 #aa{
     background-color: #4CAF50; /* Green */
@@ -88,39 +75,34 @@ footer {
     cursor: pointer;
     border-radius: 12px;
     text-align: center;
-    margin-left:30%; 
+    margin-left:35%; 
     text-decoration-color: aliceblue;
     font-weight: bolder;
 }
-    #wrapper{font: times;}
-.container{width: 90%;
-margin: 0 auto;}
 #subheader{
-    width: 100%;
     height: 70px;
     background: green;
     color: azure;
-    margin-top: 0px;}
+    margin-top: -15px;}
 #subheader p{
-    margin-left: 350px;
-    margin-top: 15px;
     font-size: 30px;
-    text-align: center;
+    float: left;
+    margin-left: 35px;
+    margin-right: 5px;
+    margin-top: 15px;
 }
 #subheader a{
     float: right;
     line-height: 25px;
     color: azure;
     text-decoration: none;
-    margin-left: 5px;
+    margin-left: 15px;
     margin-right: 5px;
     margin-top: 15px;
 }
 #main-header{
-    width: 100%;
     height: 100px;
     background-color: bisque;
-    float: left;
     margin-top: -15px;
 }
 #logo{
@@ -133,7 +115,7 @@ margin: 0 auto;}
     color: cadetblue;
     font-size: 50px;
     font-weight: bold;
-    margin-left:15px;
+    margin-left:0px;
 }
 #c{
     font-family: fantasy;
@@ -143,12 +125,12 @@ margin: 0 auto;}
 #search{
     width: 650px;
     float: left;
-    margin-left: 30px;
+    margin-left: 50px;
     padding: 35px;
     
 }
 .sr-area{
-    width: 650px;
+    width: 450px;
     height: 45px;
     border: none;
     border-radius: 10px;
@@ -165,35 +147,12 @@ margin: 0 auto;}
     background-color:orange;
    
 }
-.login{
-    width: 100%;
-    height: 800px;
-    background-color: darkgrey;
-    float: left;
-    margin-top: 2px;
-}
-nav {
-    line-height:30px;
-    background-color:#eeeeee;
-    height:700px;
-    width:100px;
-    float:left;
-    padding:5px;
-    font-family: cursive;
-    color: cadetblue;
-}
-#log{
-    padding-left: 10px;
-}
-#diag{
-    padding-left: 350px;
-}
-.demo{
+/*.demo{
     padding-left: 10px;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 40px;
-}
+}*/
     #result{
         width: 275px;
         height: 80px;
@@ -202,25 +161,29 @@ nav {
         background-color:white;
         text-align: center;
         padding-top: 30px;
-        margin-left: 35%;
+        margin-left: 37%;
         font-weight: bold;
     }
+    
+    footer {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;	 	 
+}
 </style>
 </head>
 
 <body>
- <div id="wrapper">
-    <div id="header">
+ <header>
         <div id="subheader">
-            <div class="container">
             <p>Diagnosis of Appendicits</p>
            <!-- <a href="#">Feedback</a><a href="#">About Us</a>--><a href="#">Help</a><a href="#">Home</a>
-            </div>
         </div>
-        <div id="main-header">
-        <div id="logo">
-            <span id="m">Dignosis</span><span id="c">.here</span>
-            </div>
+            <div id="main-header">
+                 <div id="logo">
+            <span id="m">Diagnosis</span><span id="c">.here</span>
+                </div>
             <div id="search">
                 <form action="http://www.yahoo.com" method="post">
                 <input class="sr-area" type="" name="search" placeholder="Search here">
@@ -228,20 +191,16 @@ nav {
                 </form>
             </div>
         </div>
-        </div>
-    </div>
- <div class="login">
- <header>
 <h1>Diagnosis From Clinical Information</h1>
 </header>
-  <nav>
+ <section>
+  <!--<nav>
       <p><i>Artificial Intelligence become one of promising technology for diagnosing diseases!<br><br> Here, we have been using this emerging technology for the diagnosis of Appendicits.</i></p>
-  </nav>
+  </nav>-->
    <!--<div id="log">
 	<h1 id="diag">Diagnosis From Clinical Information</h1>
       <div id="wra"> -->
      <!-- Main Input For Receiving Query to our ML --> 
-<section>
     <form action="{{ url_for('predict')}}"method="post">
      
       <h3 id="daa"><i>DEMOGRAPHIC DATA</i></h3>
@@ -291,13 +250,13 @@ nav {
       <option value=0>No</option>
     </select>
 		<!--<input type="text" name="RLQTendernessandReboundPain" placeholder="RLQTendernessandReboundPain" required="required" />-->
-		<div id="lo"><label for="rlq"><b>RLQ and Rebound Pain</b></label>
+		<label for="rlq"><b>RLQ and Rebound Pain</b></label>
     <select required aria-required="true" id="rlq" name="RLQTendernessandRebounPain">
      <option value="">Choose</option>
       <option value=1>Yes</option>
       <option value=0>No</option>
     </select>
-       
+       <div id="lo">
         <label for="temp"><b>Temperature</b></label>
 		<input type="text" id="temp"name="TEMPRATURE" placeholder="Temprature" required="required" />
             <label for="dur"><b>Duration</b></label>
@@ -308,7 +267,7 @@ nav {
      <option value="">Choose</option>
       <option value=1>Yes</option>
       <option value=0>No</option>
-    </select><br>
+    </select>
        <!-- <input type="text" name="Cough" placeholder="Cough" required="required" />-->
             <label for="cou"><b>Cough</b></label>
     <select required aria-required="true" id="cou" name="COUGH">
@@ -337,10 +296,10 @@ nav {
         <input type="text" id="mch" name="MCHC" placeholder="MCHC" required="required" />
         <label for="rbc"><b>RBC</b></label>
         <input type="text" id="rbc" name="RBC" placeholder="RBC" required="required" />
-        <div id="loo"><label for="hgb"><b>HGB</b></label>
+        <label for="hgb"><b>HGB</b></label>
         <input type="text" id="hgb" name="HGB" placeholder="HGB" required="required" />
-         <label for="lym"><b>Lymph</b></label>
-        <input type="text" id="lym" name="Lymph" placeholder="lymph" required="required" /></div>
+        <label for="lym"><b>Lymph</b></label>
+        <input type="text" id="lym" name="Lymph" placeholder="lymph" required="required" />
         <button type="submit" class="button">Result</button>
           </form>  
 
@@ -349,13 +308,12 @@ nav {
    <div id="result">
    {{ prediction_text }}
    </div>
+   <a id="aa" href="#">Diagnosis From Ultrasound Image >>></a>
    </section>
-    <a id="aa" href="#">Diagnosis From Ultrasound Image >>></a>
- </div>
+    
 <footer>
 <p>Copyright &copy; Eng. Mestawot Bogale</p>
-</footer>
-
+    </footer>
 </body>
 
 </html>
