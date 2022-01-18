@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Appendicitis Diagnosis</title>
+  <title>WEB AI</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
@@ -22,6 +23,51 @@ header {
         padding:25px;
         background-color: darkgrey;
 }
+    .flex{
+  display: flex;
+  border: 5px solid red;
+  &-child{
+    background: green;
+    border: 2px solid yellow;
+    flex: 1;
+  }
+}
+
+.flex--vertical{
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  > .flex-child{
+    min-width: 100%;
+  }
+}
+    #box1{
+        height: 125px;
+        width: 125px;
+        background-color: gray;
+        border-color: antiquewhite;
+        float: left;
+        margin-left: 25px;
+        text-align: center;
+    }
+    #box2{
+        height: 125px;
+        width: 125px;
+        background-color: gray;
+        border-color: antiquewhite;
+        float: right;
+        margin:  -left: 25px;
+        text-align: center;
+    }
+    #box3{
+        height: 125px;
+        width: 125px;
+        background-color: gray;
+        border-color: antiquewhite;
+        margin-left: 50%;
+        text-align: center;
+    }
+
 
     #lo{
         padding-top: 5px;
@@ -29,7 +75,7 @@ header {
     #loo{
         padding-top: 5px;
     }
-   input[type=text], select {
+    input[type=text], select {
     padding: 8px 15px;
     margin: 8px 0;
     border: 1px solid #ccc;
@@ -58,7 +104,7 @@ header {
     cursor: pointer;
     border-radius: 25%;
     text-align: center;
-    margin-left:10%; 
+    margin-left:40%; 
 }
 #aa{
     background-color: #4CAF50; /* Green */
@@ -121,7 +167,7 @@ header {
 }
 #search{
     float: left;
-    margin-left: 50px;
+    margin-left: 20px;
     padding: 35px;
     
 }
@@ -186,7 +232,8 @@ header {
         </div>
 <h1>Diagnosis From Clinical Information</h1>
 </header>
- <section>
+ <div class="flex">
+ <div class="flex-child">
   <!--<nav>
       <p><i>Artificial Intelligence become one of promising technology for diagnosing diseases!<br><br> Here, we have been using this emerging technology for the diagnosis of Appendicits.</i></p>
   </nav>-->
@@ -301,8 +348,25 @@ header {
    <div id="result">
    {{ prediction_text }}
    </div>
-   <a id="aa" href="#">Diagnosis From Ultrasound Image >>></a>
-   </section>
+     </div>
+   <div class="flex-child flex flex--vertical">
+   <div class="flex-child">
+      <h1>Diagnosis From Ultrasound Image</h1>
+      <div id="box1">
+          <h3>capture image</h3>
+      </div>
+       <div id="box2">
+          <h3>processed image</h3>
+      </div>
+    </div>
+    <div class="flex-child">
+      <h1>Result</h1>
+      <div id="box3">
+          <h3>Result</h3>
+      </div>
+    </div>
+     </div>
+   </div>
     
 <footer>
 <p>Copyright &copy; Eng. Mestawot Bogale</p>
